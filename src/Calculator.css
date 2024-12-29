@@ -1,0 +1,155 @@
+/* General Styles */
+.calculator {
+  width: 320px;
+  margin: 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+  color: white;
+}
+
+body {
+  background-color: burlywood;
+}
+
+h1 {
+  color: rgb(80, 53, 2);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* Display Styles */
+.display {
+  font-size: 2em;
+  text-align: right;
+  padding: 20px;
+  background-color: #000;
+}
+
+/* Button Styles */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+.button {
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: #444;
+  border: none;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.button.operator {
+  background-color: orange;
+  color: white;
+}
+
+.button.zero {
+  grid-column: span 2;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small screens (e.g., phones) */
+@media (max-width: 480px) {
+  .calculator {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .display {
+    font-size: 1.8em;
+    padding: 15px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    font-size: 1.2em;
+    padding: 15px;
+  }
+
+  .button.zero {
+    grid-column: span 2;
+  }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .calculator {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .display {
+    font-size: 2em;
+    padding: 18px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    font-size: 1.4em;
+    padding: 18px;
+  }
+
+  .button.zero {
+    grid-column: span 2;
+  }
+}
+
+/* For large screens (e.g., laptops and desktops) */
+@media (min-width: 769px) {
+  .calculator {
+    width: 320px;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .button.zero {
+    grid-column: span 2;
+  }
+}
+
+  
